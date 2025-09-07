@@ -1,0 +1,77 @@
+/* Comprehensive CSS Reset */
+
+/* Box sizing and border rules */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove default body spacing and set a sensible base font */
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+/* Paragraphs and text elements */
+p {
+  margin: 0;
+}
+
+/* Lists */
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Anchors */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Images */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Forms */
+input, button, textarea, select {
+  margin: 0;
+  font: inherit;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Buttons */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Misc */
+hr {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+}
+

@@ -1,4 +1,5 @@
 <template> 
+
     <div class="roleSection">
 	<rolesCard link="/WSJ" company="The Wall Street Journal" project="Executive Edition" description="An AI powered news feed, that provides tailored news to corporate employees based off their role, company and specified interests. " timeperiod="June 2022 – Dec 2022" image="WSJ.png"/>
 
@@ -29,7 +30,7 @@ export default{
 <style>
 
     .roleSection{
-        display: flex;
+        display: grid;
         flex-wrap: wrap;
         gap:28px;   
         padding-left:72px;
@@ -37,6 +38,22 @@ export default{
         padding-top:24px;
         padding-bottom:24px;
         justify-content: flex-start;
+        grid-template-columns: repeat(3, 1fr);
+        max-width:1440px;
     }
+
+/* Breakpoint: 2 per row */
+@media (max-width: 1200px) {
+  .roleSection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Breakpoint: 1 per row */
+@media (max-width: 768px) {
+  .roleSection {
+    grid-template-columns: 1fr;
+  }
+}
 
 </style>

@@ -53,7 +53,8 @@
     display: flex;
     flex-direction: column;
     background-color:white;
-    width: calc((100vw / 3) - 72px);
+
+    /*width: calc((100vw / 3) - 72px);*/
     padding-left:24px;
     padding-right:24px;
     padding-top:24px;

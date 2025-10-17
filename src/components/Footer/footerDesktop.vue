@@ -126,4 +126,36 @@ export default{
    font-size: 14px;
 }
 
+/* Breakpoint: 2 per row */
+@media (max-width: 1200px) {
+  .roleSection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Breakpoint: 1 per row */
+@media (max-width: 540px) {
+  .footer{
+    padding-left:13.6%;
+    padding-right:13.6%;
+    align-content:center;
+  }
+
+  .content{
+    flex-direction: column;
+    gap:32px;
+    align-items:start;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .footer{
+    padding-left:10%;
+    padding-right:10%;
+    align-content:center;
+  }
+
+}
+
 </style>

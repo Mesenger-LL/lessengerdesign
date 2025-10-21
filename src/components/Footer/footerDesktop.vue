@@ -159,12 +159,13 @@ export default{
   }
 
   .footright{
-    grid-area:right;
     justify-self: start;
-    display: flex;
-    flex-direction: column;
-    gap:32px;
 }
+
+.contact{
+    padding-left:0px;
+}
+
 
 
 }

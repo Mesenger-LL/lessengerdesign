@@ -8,7 +8,7 @@
                     <h2>Experience defines who we are and how we react.</h2>
                     <h2>Let's create positive reactions.</h2>
                 </div>
-                <ButtonCTA label="Back to Top" icon="arrowup" to="#top" />
+                <ButtonCTA label="Back to Top" icon="arrowup" to="#top" class="backto" />
             </div>
             <div class="footright">
 
@@ -18,12 +18,12 @@
                 </div>
 
                 <div class="link-columns">
-                    <div class="navcolumn">
+                    <div class="navcolumn navcol1">
                         <navlinks label="Blog" to="/ongoing" />
                         <navlinks label="About Me" to="/roles" />
                     </div>
 
-                    <div class="navcolumn">
+                    <div class="navcolumn navcol2">
                     <navlinks label="Ongoing Projects" to="/ongoing" />
                     <navlinks label="Design Roles" to="/roles" />
                     <navlinks label="Case Studies" to="/studies" />
@@ -56,35 +56,47 @@ export default{
 
 <style>
 .footer{
-    display:flex;
+    
+    display: flex;
     flex-direction: column;
+    
     background-color: var(--bg-color);
     justify-content: space-between;
     align-items: center;
-    padding-left:176px;
-    padding-right:176px;
     padding-top:88px;
+    padding-left:12%;
+    padding-right:12%;
     padding-bottom:112px;
     gap:80px;
 }
 
+.content{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-areas:
+        "left right";
+    align-items: center;
+    gap:1rem;
+    justify-content: space-between;
+}
+
 .footleft{
+    grid-area:left;
+    justify-self: start;
     display: flex;
     flex-direction: column;
     gap:32px;
 }
 
 .footright{
+    grid-area:right;
+    justify-self: end;
     display: flex;
     flex-direction: column;
     gap:32px;
 }
-.content{
-    width:100%;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-}
+
 
 .contact{
     display: flex;
@@ -135,27 +147,27 @@ export default{
 
 /* Breakpoint: 1 per row */
 @media (max-width: 540px) {
-  .footer{
-    padding-left:13.6%;
-    padding-right:13.6%;
-    align-content:center;
-  }
 
   .content{
     flex-direction: column;
     gap:32px;
     align-items:start;
+    grid-template-columns:1fr;
+    grid-template-areas:
+        "right"
+        "left";
   }
+
+  .footright{
+    grid-area:right;
+    justify-self: start;
+    display: flex;
+    flex-direction: column;
+    gap:32px;
+}
+
 
 }
 
-@media (max-width: 768px) {
-  .footer{
-    padding-left:10%;
-    padding-right:10%;
-    align-content:center;
-  }
-
-}
 
 </style>
